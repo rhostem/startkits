@@ -1,0 +1,104 @@
+@mixin clearfix() {
+  &::after {
+    content: '';
+    clear: both;
+    display: table;
+  }
+}
+
+@mixin centered() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin centeredX() {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin centeredY() {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+@mixin circle($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+}
+
+@mixin square($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin selectedDotIndicator($size, $color) {
+  position: relative;
+
+  &::before {
+    @include centeredX();
+    bottom: 3px;
+    content: ' ';
+    width: $size;
+    height: $size;
+    border-radius: 50%;
+    background-color: $color;
+  }
+}
+
+@mixin triangleUp($width, $height, $color) {
+  width: 0;
+  height: 0;
+  border-left: calc(#{$width} / 2) solid transparent;
+  border-right: calc(#{$width} / 2) solid transparent;
+  border-bottom: $height solid $color;
+}
+
+@mixin triangleDown($width, $height, $color) {
+  width: 0;
+  height: 0;
+  border-left: calc(#{$width} / 2) solid transparent;
+  border-right: calc(#{$width} / 2) solid transparent;
+  border-top: $height solid $color;
+}
+
+@mixin textEllipsis() {
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 모바일에서만 표시
+@mixin isMobileOnly($display: null) {
+  @if ($display) {
+    display: $display;
+    @media only screen and (min-width: $desktopBP) {
+      display: none;
+    }
+  } @else {
+    display: block;
+    @media only screen and (min-width: $desktopBP) {
+      display: none;
+    }
+  }
+}
+
+// 데스크탑에서만 표시
+@mixin isDesktopOnly($display: null) {
+  @if ($display) {
+    display: none;
+    @media only screen and (min-width: $desktopBP) {
+      display: $display;
+    }
+  } @else {
+    display: none;
+    @media only screen and (min-width: $desktopBP) {
+      display: block;
+    }
+  }
+}

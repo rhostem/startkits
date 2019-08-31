@@ -1,0 +1,26 @@
+@import './_var.scss';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+
+  @media only screen and (min-width: $desktopBP) {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  padding: 1rem;
+
+  @media only screen and (min-width: $desktopBP) {
+    max-width: $desktopMaxWidth;
+  }
+}

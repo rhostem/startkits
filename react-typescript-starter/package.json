@@ -1,0 +1,73 @@
+{
+  "name": "react-typesscript-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run start",
+    "start": "react-scripts-ts start",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "precommit": "lint-staged",
+    "clean": "rimraf build",
+    "build": "npm run clean && sh -ac '. .env.${REACT_APP_ENV}; react-scripts-ts build'",
+    "build:test": "REACT_APP_ENV=development npm run build",
+    "build:prod": "REACT_APP_ENV=production npm run build",
+    "deploy": "npm run deploy:test",
+    "deploy:test": "npm run build:test && npm run upload",
+    "deploy:prod": "npm run build:prod && npm run upload",
+    "upload": "gh-pages -d build",
+    "flow": "flow",
+    "analyze": "source-map-explorer build/static/js/main.*"
+  },
+  "homepage": "",
+  "lint-staged": {
+    "src/**/*.{js,jsx,ts,tsx,json,css,scss,sass}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "@types/react-router-redux": "^5.0.9",
+    "global": "^4.3.2",
+    "history": "^4.7.2",
+    "immutable": "^3.8.1",
+    "polished": "^1.3.0",
+    "prettier": "^1.10.2",
+    "ramda": "^0.25.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-hot-loader": "^3.1.3",
+    "react-redux": "^5.0.6",
+    "react-redux-typescript": "^3.0.0-rc.3",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.9",
+    "react-scripts": "^1.0.16",
+    "react-scripts-ts": "^2.8.0",
+    "react-tap-event-plugin": "^3.0.2",
+    "redux": "^3.7.2",
+    "redux-immutable": "^4.0.0",
+    "redux-saga": "^0.15.6",
+    "redux-thunk": "^2.2.0",
+    "styled-components": "^2.4.0",
+    "whatwg-fetch": "^2.0.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^21.1.5",
+    "@types/node": "^8.0.47",
+    "@types/react": "^16.0.34",
+    "@types/react-dom": "^16.0.3",
+    "@types/react-hot-loader": "^3.0.5",
+    "@types/react-redux": "^5.0.12",
+    "@types/react-router": "^4.0.20",
+    "@types/react-router-dom": "^4.2.3",
+    "@types/react-tap-event-plugin": "0.0.30",
+    "@types/webpack-env": "^1.13.2",
+    "flow-bin": "^0.58.0",
+    "gh-pages": "^1.0.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.2",
+    "rimraf": "^2.6.2",
+    "source-map-explorer": "^1.4.0"
+  }
+}

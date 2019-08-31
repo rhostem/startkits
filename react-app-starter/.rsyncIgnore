@@ -1,0 +1,7 @@
+.git
+.gitignore
+.next
+.prettierrc
+.vscode
+node_modules
+.env.production

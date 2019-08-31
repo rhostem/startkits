@@ -1,0 +1,1 @@
+{"version":3,"sources":["utils.js"],"names":["isMobile","window","test","navigator","userAgent"],"mappings":";;AAAA,SAASA,QAAT,GAAoB;AAClB,SAAOC,UAAU,WAAWC,IAAX,CAAgBD,OAAOE,SAAP,CAAiBC,SAAjC,CAAjB;AACD","file":"script.js","sourcesContent":["function isMobile() {\n  return window && /mobile/gi.test(window.navigator.userAgent)\n}\n"]}

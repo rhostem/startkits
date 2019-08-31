@@ -1,0 +1,44 @@
+{
+  "name": "gulp-static-site",
+  "version": "1.0.0",
+  "description": "static site starter with gulp build process",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhostem/gulp-static-site"
+  },
+  "scripts": {
+    "start": "gulp",
+    "dev": "gulp",
+    "clean": "gulp clean",
+    "precommit": "lint-staged",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "lint-staged": {
+    "*.{pug,js,json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "browser-sync": "^2.23.6",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-util": "^3.0.8",
+    "run-sequence": "^2.2.1"
+  },
+  "devDependencies": {
+    "lint-staged": "^7.1.1",
+    "prettier": "^1.12.1"
+  }
+}
