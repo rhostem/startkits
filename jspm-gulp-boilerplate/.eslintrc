@@ -1,0 +1,57 @@
+{
+  "parser": "babel-eslint",
+  "fix": true,
+  "extends": "eslint:recommended",
+  "globals": {
+    "window": true,
+    "document": true,
+    "alert": true,
+  },
+  "plugins":[
+    "react"
+  ],
+  "env": {
+    "es6": true,
+    "node": true,
+    "browser": true
+  },
+  "ecmaFeatures": {
+    "jsx": true
+  },
+  "settings": {
+    "react": {
+      "pragma": "React"
+    }
+  },
+  "rules": {
+    "semi": [1, "always"],
+    "semi-spacing": ["error", {"before": false, "after": true}],
+    "comma-dangle": [0, "never"],
+    "no-unused-vars": [1, {"vars": "all", "args": "none"}] ,
+    "linebreak-style": [ 2, "unix" ],
+    "no-console": 0,
+    "no-mixed-spaces-and-tabs": 0,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "no-cond-assign": 0,
+    "space-infix-ops": 1,
+    "no-extra-semi": 1,
+    "no-multi-spaces": 1,
+    "block-spacing": ["error", "always"],
+    "comma-spacing": ["error", {"before": false, "after": true}],
+    "computed-property-spacing": ["error", "never"],
+    "eol-last": 1,
+    indent: ["error", 2, {"VariableDeclarator": { "var": 2, "let": 2, "const": 3}}],
+    quotes: ["error", "single"],
+    keyword-spacing: "error",
+    no-spaced-func: "error",
+    no-trailing-spaces: "error",
+    "object-curly-spacing": ["error", "always"],
+    space-before-blocks: "error",
+    "space-in-parens": ["error", "never"],
+    "space-unary-ops": [2, { "words": true, "nonwords": false}],
+    key-spacing: ["error", {"beforeColon": false, "afterColon": true}],
+    arrow-spacing: "error",
+    "template-curly-spacing": ["error", "never"],
+  }
+}

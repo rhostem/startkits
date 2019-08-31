@@ -1,0 +1,13 @@
+//- 네비게이션 바
+mixin navBar(navigation_contents)
+  ul(class='gnb')
+
+    each item in navigation_contents
+      li(
+        id='#{item.id}'
+      )
+        a(
+          href=(current_page == item.name ? '#page-top' : item.name + '.html')
+          class=(current_page == item.name ? 'current' : null )
+        ) #{item.content}
+

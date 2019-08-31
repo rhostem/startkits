@@ -1,0 +1,47 @@
+block mixins
+	include config/_mixins
+
+block settings
+	include config/_settings
+
+
+doctype html
+html(lang="ko")
+
+	//- head
+	//- ============================================================
+	head
+
+		block meta
+			include head/_meta
+
+		//- ----------------------------------------
+		block pageTitle
+			title #{page_title}
+		//- ----------------------------------------
+
+		block stylesheet
+			include head/_stylesheet
+
+	//- body
+	//- ============================================================
+	body
+
+		block gnb
+			include body/_gnb
+
+		block header
+			include body/_header
+
+		//- ----------------------------------------
+		block content
+		//- ----------------------------------------
+
+		block footer
+			include body/_footer
+
+		block script_end_of_body
+			include scripts/_scripts_footer
+
+	//- ============================================================
+	//- end of body

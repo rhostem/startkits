@@ -6,3 +6,4 @@
 - react-typescript-starter
 - react-app-starter
 - webpack-static-site
+- jspm-gulp-boilerplate

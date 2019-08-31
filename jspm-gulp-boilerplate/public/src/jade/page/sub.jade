@@ -1,0 +1,15 @@
+extends ../part/_template_page
+
+block append stylesheet
+  link(rel="stylesheet" href="/css/common.css?bust=" + version)
+
+block append script_end_of_body
+  script(src="/lib/system.js")
+  script(src="/config.js")
+  script.
+    System.import('/js/main-sub')
+
+
+block content
+  main
+    h2 page in subfolder!!
