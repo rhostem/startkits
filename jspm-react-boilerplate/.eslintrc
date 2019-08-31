@@ -1,0 +1,15 @@
+{
+  "extends": [
+    "airbnb"
+  ],
+  "env": {
+    "jasmine": true,
+    "node": true,
+    "mocha": true
+  },
+  "rules": {
+    "import/no-unresolved": 0,
+    "react/prefer-stateless-function": 0,
+    "object-curly-spacing": 0
+  }
+}

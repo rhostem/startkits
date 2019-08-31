@@ -7,3 +7,6 @@
 - react-app-starter
 - webpack-static-site
 - jspm-gulp-boilerplate
+- jspm-react-boilerplate
+
+

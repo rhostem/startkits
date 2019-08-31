@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jspm-react</title>
+    <meta name="description" content="bbros hospitam manager">
+    <meta name="viewport" content="width=device-width">
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <link rel="icon" href="" type="image/x-icon">
+
+  </head>
+  <body>
+
+    <div id="app"></div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- inject:js -->
+    <!-- endinject -->
+    <script src="jspm_packages/system.js"></script>
+    <!-- endbuild -->
+
+    <!-- build:js scripts/app.js -->
+    <!-- endbuild -->
+    <script src="config.js"></script>
+
+    <script>
+      if (location.origin.match(/localhost:5000/)) {
+        System.trace = true
+        var readyForMainLoad;
+
+        readyForMainLoad = System.import('systemjs-hot-reloader').then(function(HotReloader){
+          hr = new HotReloader.default('http://localhost:9000');
+        });
+
+        Promise.resolve(readyForMainLoad).then(function() {
+          System.import("./app/index").then(function(){ console.log("running hot reloder") });
+        });
+      } else {
+        System.import('./app/index');
+      }
+    </script>
+  </body>
+</html>

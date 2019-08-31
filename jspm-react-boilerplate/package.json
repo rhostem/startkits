@@ -1,0 +1,118 @@
+{
+  "name": "jspm-react-boilerplate",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "gulp | jest",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
+    "unmockedModulePathPatterns": [
+      "react",
+      "react-dom",
+      "react-addons-test-utils",
+      "fbjs",
+      "enzyme",
+      "cheerio",
+      "htmlparser2",
+      "underscore",
+      "lodash",
+      "domhandler",
+      "object.assign",
+      "define-properties",
+      "function-bind",
+      "object-keys"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-jest": "^12.1.0",
+    "babel-preset-airbnb": "^2.0.0",
+    "browser-sync": "^2.12.10",
+    "chokidar-socket-emitter": "^0.5.2",
+    "connect-livereload": "^0.5.4",
+    "cssnext": "^1.8.4",
+    "del": "^2.2.0",
+    "enzyme": "^2.3.0",
+    "eslint": "^2.11.1",
+    "eslint-config-airbnb": "^9.0.1",
+    "eslint-config-xo-space": "^0.13.0",
+    "eslint-plugin-import": "^1.8.1",
+    "eslint-plugin-jsx-a11y": "^1.3.0",
+    "eslint-plugin-react": "^5.1.1",
+    "eslint-watch": "^2.1.11",
+    "gulp": "^3.9.1",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-eslint": "^2.0.0",
+    "gulp-filter": "^4.0.0",
+    "gulp-inject": "^4.1.0",
+    "gulp-load-plugins": "^1.2.4",
+    "gulp-postcss": "^6.1.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-replace": "^0.5.4",
+    "gulp-rev": "^7.0.0",
+    "gulp-rev-replace": "^0.4.3",
+    "gulp-sequence": "^0.4.5",
+    "gulp-size": "^2.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-useref": "^3.1.0",
+    "gulp-util": "^3.0.7",
+    "http-proxy-middleware": "^0.15.2",
+    "http-server": "^0.9.0",
+    "jest": "^12.1.1",
+    "jest-cli": "^12.1.1",
+    "jspm": "^0.16.36",
+    "lost": "^6.8.1",
+    "path": "^0.12.7",
+    "postcss-advanced-variables": "^1.2.2",
+    "postcss-browser-reporter": "^0.5.0",
+    "postcss-clearfix": "^1.0.0",
+    "postcss-cssnext": "^2.7.0",
+    "postcss-import": "^8.1.2",
+    "postcss-reporter": "^1.3.3",
+    "precss": "^1.4.0",
+    "react": "^15.1.0",
+    "react-addons-test-utils": "^15.1.0",
+    "redux-thunk": "^2.1.0",
+    "stylelint": "^6.9.0",
+    "stylelint-config-standard": "^10.0.0",
+    "uglify-save-license": "^0.4.1",
+    "wrench": "^1.5.9"
+  },
+  "eslintConfig": {
+    "extends": "xo-space"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "public"
+    },
+    "dependencies": {
+      "babel-polyfill": "npm:babel-polyfill@^6.9.1",
+      "barisaydinoglu/Detectizr": "github:barisaydinoglu/Detectizr@^2.2.0",
+      "css": "github:systemjs/plugin-css@^0.1.23",
+      "enzyme": "npm:enzyme@^2.3.0",
+      "isomorphic-fetch": "npm:isomorphic-fetch@^2.2.1",
+      "jquery": "npm:jquery@^3.0.0",
+      "react": "npm:react@^15.2.0",
+      "react-dom": "npm:react-dom@^15.1.0",
+      "react-redux": "npm:react-redux@^4.4.5",
+      "react-router": "npm:react-router@^2.5.2",
+      "redux": "npm:redux@^3.5.2",
+      "redux-logger": "npm:redux-logger@^2.6.1",
+      "redux-thunk": "npm:redux-thunk@^2.1.0",
+      "text": "github:systemjs/plugin-text@^0.0.8"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4",
+      "systemjs-hot-reloader": "github:capaj/systemjs-hot-reloader@^0.6.0"
+    }
+  },
+  "dependencies": {
+    "react-router-redux": "^4.0.5"
+  }
+}

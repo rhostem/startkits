@@ -1,0 +1,15 @@
+.Tab {
+  lost-utility: clearfix;
+  border-bottom: 1px solid #ccc;
+
+  &-item {
+    lost-column: 1/6 6 0;
+    padding: 0.5rem;
+    text-align: center;
+    border-right: 1px solid #eee;
+
+    &:nth-child(6n) {
+      border-right: none;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+.App {
+  lost-utility: clearfix;
+  width: 960px;
+  margin: 0 auto;
+  border: 1px solid #ddd;
+
+  &-side {
+    float: left;
+    width: 240px;
+    padding: 0.5rem;
+  }
+
+  &-main {
+    float: left;
+    width: calc(100% - 240px);
+    padding: 0.5rem;
+    border-left: 1px solid #ddd;
+  }
+}
