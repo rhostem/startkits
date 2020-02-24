@@ -1,20 +1,32 @@
-import React from 'react'
-import counter, { increment, decrement } from '../stores/counter'
+import React, { useState } from 'react'
+import './Counter.css'
+import { increment, decrement } from '../stores/counter'
 import { useSelector, useDispatch } from 'react-redux'
 
 export default function Counter() {
   const counter = useSelector(s => s.counter)
   const dispatch = useDispatch()
+  const [amount, setAmount] = useState(1)
 
   return (
-    <div>
+    <div className={'counter'}>
       <h2>counter</h2>
-      <div>
+      <p>
         <b>{counter}</b>
-      </div>
+      </p>
       <div>
-        <button onClick={() => dispatch(increment())}>increment</button>
-        <button onClick={() => dispatch(decrement())}>decrement</button>
+        <button onClick={() => dispatch(decrement(amount))}>decrement</button>
+        <button onClick={() => dispatch(increment(amount))}>increment</button>
+
+        <div>
+          <label htmlFor="">amount</label>
+          <input
+            id="amount"
+            type="number"
+            value={amount}
+            onChange={e => setAmount(parseInt(e.target.value, 10))}
+          />
+        </div>
       </div>
     </div>
   )

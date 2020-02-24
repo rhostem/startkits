@@ -7,6 +7,8 @@ function App() {
     <div className="App">
       <h1>redux toolkit starter</h1>
       <Counter></Counter>
+
+      <hr />
     </div>
   )
 }

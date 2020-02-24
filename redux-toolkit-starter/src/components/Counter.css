@@ -1,0 +1,15 @@
+.counter {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.counter button {
+  border: 1px solid #eee;
+  background: #eee;
+  margin: 0 5px;
+}
+
+.counter input {
+  border: 1px solid #eee;
+  margin-left: 5px;
+}
