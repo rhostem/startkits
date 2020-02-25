@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Counter.css'
-import { increment, decrement } from '../stores/counter'
 import { useSelector, useDispatch } from 'react-redux'
+import { increment, decrement } from 'src/features/counter/counterReducer'
 
 export default function Counter() {
   const counter = useSelector(s => s.counter)
