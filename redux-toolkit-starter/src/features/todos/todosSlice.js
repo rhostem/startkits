@@ -1,7 +1,9 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
+let todoId = 0
+
 const todos = createSlice({
-  name: 'todos',
+  name: 'todos', // 액션 타입 문자열의 prefix로 들어간다.
   initialState: [],
   reducers: {
     addTodo: {
@@ -9,10 +11,10 @@ const todos = createSlice({
         state,
         action: PayloadAction<{ id: number | string, text: string }>
       ) => {
-        const { id, text } = action.payload
-        state.push({ id, text })
+        const { text } = action.payload
+        state.push({ id: todoId++, text })
       },
-      prepare: text => ({
+      prepare: (text: string) => ({
         payload: { id: Math.floor(Math.random() + 100000), text },
       }),
     },

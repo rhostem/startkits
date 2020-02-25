@@ -1,14 +1,19 @@
 import { createAction, createReducer } from '@reduxjs/toolkit'
 
-export const increment = createAction('increment', (amount = 0) => {
+export const incrementWithoutPrepareCb = createAction(
+  'increment_without_prepare'
+)
+
+export const increment = createAction('increment', (amount: number = 0) => {
   return {
     payload: {
       amount,
     },
+    another: {},
   }
 })
 
-export const decrement = createAction('decrement', (amount = 0) => {
+export const decrement = createAction('decrement', (amount: number = 0) => {
   return {
     payload: {
       amount,
