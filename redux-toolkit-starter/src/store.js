@@ -1,5 +1,8 @@
-import { configureStore, getDefaultMiddleware } from '@reduxjs/toolkit'
-import { combineReducers } from 'redux'
+import {
+  configureStore,
+  getDefaultMiddleware,
+  combineReducers,
+} from '@reduxjs/toolkit'
 import todos from 'src/features/todos/todosSlice'
 import counter from 'src/features/counter/counterReducer'
 

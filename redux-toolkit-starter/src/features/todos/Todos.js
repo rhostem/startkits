@@ -1,9 +1,10 @@
 import React from 'react'
+import { SubHeading } from 'src/components/Heading'
 
 export default function Todos() {
   return (
     <div>
-      <h2>todos</h2>
+      <SubHeading>todos</SubHeading>
     </div>
   )
 }

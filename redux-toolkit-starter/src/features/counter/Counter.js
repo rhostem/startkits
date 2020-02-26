@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Counter.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement } from 'src/features/counter/counterReducer'
+import { SubHeading } from 'src/components/Heading'
 
 export default function Counter() {
   const counter = useSelector(s => s.counter)
@@ -10,7 +11,7 @@ export default function Counter() {
 
   return (
     <div className={'counter'}>
-      <h2>counter</h2>
+      <SubHeading>counter</SubHeading>
       <p>
         <b>{counter}</b>
       </p>
