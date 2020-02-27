@@ -18,7 +18,7 @@ const Wrap = styled.div`
 export default function Todos() {
   const todosState = useSelector((s: IRootState) => s.todos)
   const dispatch = useDispatch()
-  const [todoText, setTodoText] = useState('text')
+  const [todoText, setTodoText] = useState('')
 
   const handleClickAdd = useCallback(
     e => {
@@ -54,15 +54,17 @@ export default function Todos() {
       ) : (
         <ul>
           {todosState.map(todoItem => (
-            <li>
-              <span
+            <li id={`todo-${todoItem.id}`}>
+              <label
+                for={todoItem.id}
                 style={{
                   textDecoration: todoItem.isDone ? 'line-through' : null,
                 }}
               >
                 {todoItem.text}
-              </span>
+              </label>
               <input
+                id={todoItem.id}
                 type="checkbox"
                 checked={todoItem.isDone}
                 onClick={() => dispatch(toggleIsDone({ id: todoItem.id }))}
