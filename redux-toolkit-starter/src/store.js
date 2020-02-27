@@ -5,10 +5,12 @@ import {
 } from '@reduxjs/toolkit'
 import todos from 'src/features/todos/todosSlice'
 import counter from 'src/features/counter/counterReducer'
+import repoDetail from 'src/features/github/repoDetailSlice'
 
 const rootReducer = combineReducers({
   counter,
   todos: todos.reducer,
+  repoDetail: repoDetail.reducer,
 })
 
 const store = configureStore({

@@ -5,7 +5,6 @@ export async function getRepoDetail(
   repo: string
 ): Promise<IRepoDetail> {
   const url = `https://api.github.com/repos/${org}/${repo}`
-
   const { data } = await axios.get(url)
   return data
 }

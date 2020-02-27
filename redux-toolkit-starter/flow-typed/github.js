@@ -15,9 +15,5 @@ declare type IRepoDetail = {
   git_url: string,
   homepage: string,
   stargazers_count: number,
-  watchers_count: number,
-  open_issues_count: number,
-  open_issues: number,
-  watchers: number,
   default_branch: string,
 }

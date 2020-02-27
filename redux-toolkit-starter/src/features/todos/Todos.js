@@ -13,27 +13,34 @@ export default function Todos() {
   const dispatch = useDispatch()
   const [todoText, setTodoText] = useState('text')
 
-  const handleClickAdd = useCallback(() => {
-    if (!!todoText) {
-      dispatch(addTodo(todoText))
-    } else {
-      alert('⚠️ empty text')
-    }
-  }, [dispatch, todoText])
+  const handleClickAdd = useCallback(
+    e => {
+      e.preventDefault()
+
+      if (!!todoText) {
+        dispatch(addTodo(todoText))
+      } else {
+        alert('⚠️ empty text')
+      }
+    },
+    [dispatch, todoText]
+  )
 
   return (
     <div>
       <SubHeading>todos</SubHeading>
 
-      <div>
+      <form onSubmit={handleClickAdd}>
         <input
           type="text"
           placeholder="new Todo"
           value={todoText}
           onChange={e => setTodoText(e.target.value)}
         />
-        <button onClick={handleClickAdd}>Add Todo</button>
-      </div>
+        <button type="submit" onClick={handleClickAdd}>
+          Add Todo
+        </button>
+      </form>
 
       {todosState.length === 0 ? (
         <div>there is no todo items</div>
