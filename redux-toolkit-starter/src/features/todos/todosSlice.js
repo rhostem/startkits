@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-let todoId = 0
+let todoId = 1
 
 const initialState: ITodo[] = []
 
@@ -30,7 +30,6 @@ const todos = createSlice({
 
     toggleIsDone: (state, action: PayloadAction<{ id: number }>) => {
       const target = state.findIndex(item => item.id === action.payload.id)
-      console.log(`target`, target)
 
       if (typeof target === 'number') {
         state[target].isDone = !state[target].isDone

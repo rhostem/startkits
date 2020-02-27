@@ -39,7 +39,7 @@ export default function Todos() {
         <div>there is no todo items</div>
       ) : (
         <ul>
-          {todosState.map((todoItem: ITodo) => (
+          {todosState.map(todoItem => (
             <li>
               <span
                 style={{
