@@ -9,7 +9,6 @@ export const increment = createAction('increment', (amount: number = 0) => {
     payload: {
       amount,
     },
-    another: {},
   }
 })
 
@@ -17,6 +16,7 @@ export const decrement = createAction('decrement', (amount: number = 0) => {
   return {
     payload: {
       amount,
+      test: 0,
     },
   }
 })

@@ -7,22 +7,38 @@ const todos = createSlice({
   name: 'todos', // 액션 타입 문자열의 prefix로 들어간다.
   initialState,
   reducers: {
+    // reducer와 action 생성자 분리
     addTodo: {
-      reducer: (
-        state,
-        action: PayloadAction<{ id: number | string, text: string }>
-      ) => {
-        const { text } = action.payload
-        state.push({ id: todoId++, text, isDone: false })
+      reducer: (state, action) => {
+        state.push(action.payload)
       },
-      prepare: (text: string) => ({
-        payload: { id: Math.floor(Math.random() + 100000), text },
+      prepare: (text: string): PayloadAction<ITodo> => ({
+        payload: {
+          id: todoId++,
+          text,
+          isDone: false,
+        },
       }),
     },
-    removeTodo: {},
+    // action 생성자 별도로 없음.
+    removeTodo: (state, action: PayloadAction<{ id: number }>) => {
+      state.splice(
+        state.findIndex(item => item.id === action.payload.id),
+        1
+      )
+    },
+
+    toggleIsDone: (state, action: PayloadAction<{ id: number }>) => {
+      const target = state.findIndex(item => item.id === action.payload.id)
+      console.log(`target`, target)
+
+      if (typeof target === 'number') {
+        state[target].isDone = !state[target].isDone
+      }
+    },
   },
 })
 
-export const { addTodo } = todos.actions
+export const { addTodo, removeTodo, toggleIsDone } = todos.actions
 
 export default todos
