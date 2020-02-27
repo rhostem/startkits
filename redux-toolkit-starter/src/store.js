@@ -3,14 +3,14 @@ import {
   combineReducers,
   getDefaultMiddleware,
 } from '@reduxjs/toolkit'
-import todos from 'src/features/todos/todosSlice'
+import todosSlices from 'src/features/todos/todosSlice'
 import counter from 'src/features/counter/counterReducer'
-import repoDetail from 'src/features/github/repoDetailSlice'
+import repoDetailSlice from 'src/features/github/repoDetailSlice'
 
 const rootReducer = combineReducers({
   counter,
-  todos: todos.reducer,
-  repoDetail: repoDetail.reducer,
+  todos: todosSlices.reducer,
+  repoDetail: repoDetailSlice.reducer,
 })
 
 const store = configureStore({
@@ -21,6 +21,6 @@ const store = configureStore({
 // Flow 타입으로 사용할 RootState. 아래와 같이 import해서 사용한다.
 // import { type RootState } from 'src/store'
 const rootState = store.getState()
-export type IRootState = typeof rootState
+export type IRootState = typeof rootState // initialState의 타입
 
 export default store

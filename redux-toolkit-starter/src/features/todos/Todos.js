@@ -7,6 +7,13 @@ import {
   removeTodo,
   toggleIsDone,
 } from 'src/features/todos/todosSlice'
+import styled from 'styled-components'
+
+const Wrap = styled.div`
+  ul {
+    list-style: none;
+  }
+`
 
 export default function Todos() {
   const todosState = useSelector((s: IRootState) => s.todos)
@@ -20,14 +27,14 @@ export default function Todos() {
       if (!!todoText) {
         dispatch(addTodo(todoText))
       } else {
-        alert('⚠️ empty text')
+        alert('⚠️ input text is empty')
       }
     },
     [dispatch, todoText]
   )
 
   return (
-    <div>
+    <Wrap>
       <SubHeading>todos</SubHeading>
 
       <form onSubmit={handleClickAdd}>
@@ -67,6 +74,6 @@ export default function Todos() {
           ))}
         </ul>
       )}
-    </div>
+    </Wrap>
   )
 }

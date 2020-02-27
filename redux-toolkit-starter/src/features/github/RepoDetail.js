@@ -23,12 +23,12 @@ const DataSet = styled.div`
 
   label {
     text-align: right;
-    width: 120px;
+    width: 130px;
   }
 
   label + span {
     text-align: left;
-    width: calc(100% - 120px);
+    width: calc(100% - 130px);
     overflow-x: hidden;
     font-weight: bold;
     margin-left: 1rem;
@@ -47,7 +47,7 @@ export default function RepoDetail() {
 
   return (
     <div>
-      <SubHeading>Github Repositry detail</SubHeading>
+      <SubHeading>Github Repository detail</SubHeading>
 
       <div>
         {isLoading ? (
