@@ -1,15 +1,15 @@
-declare type Label = {
+declare type ILabel = {
   id: number,
   name: string,
   color: string,
 }
 
-declare type User = {
+declare type IUser = {
   login: string,
   avatar_url: string,
 }
 
-declare type Issue = {
+declare type IIssue = {
   id: number,
   title: string,
   number: number,
@@ -21,14 +21,14 @@ declare type Issue = {
   comments: number,
 }
 
-// declare type RepoDetails = {
-//   id: number,
-//   name: string,
-//   full_name: string,
-//   open_issues_count: number,
-// }
+declare type IRepoDetails = {
+  id: number,
+  name: string,
+  full_name: string,
+  open_issues_count: number,
+}
 
-declare type Comment = {
+declare type IComment = {
   id: number,
   body: string,
   user: User,
@@ -36,7 +36,7 @@ declare type Comment = {
   updated_at: string,
 }
 
-declare type IssuesResult = {
+declare type IIssuesResult = {
   pageLinks: Links | null,
   pageCount: number,
   issues: Issue[],

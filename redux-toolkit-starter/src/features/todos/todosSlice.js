@@ -1,5 +1,4 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-
 let todoId = 0
 
 const todos = createSlice({
@@ -18,6 +17,7 @@ const todos = createSlice({
         payload: { id: Math.floor(Math.random() + 100000), text },
       }),
     },
+    removeTodo: {},
   },
 })
 
