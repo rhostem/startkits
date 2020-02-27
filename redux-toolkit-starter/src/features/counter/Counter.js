@@ -2,15 +2,17 @@ import React, { useState } from 'react'
 import './Counter.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { increment, decrement } from 'src/features/counter/counterReducer'
+import { SubHeading } from 'src/components/Heading'
+import { type IRootState } from 'src/store'
 
 export default function Counter() {
-  const counter = useSelector(s => s.counter)
+  const counter = useSelector((state: IRootState) => state.counter)
   const dispatch = useDispatch()
   const [amount, setAmount] = useState(1)
 
   return (
     <div className={'counter'}>
-      <h2>counter</h2>
+      <SubHeading>counter</SubHeading>
       <p>
         <b>{counter}</b>
       </p>
