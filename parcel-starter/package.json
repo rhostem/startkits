@@ -12,6 +12,7 @@
   "devDependencies": {
     "@babel/core": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
+    "parcel": "^1.12.4",
     "sass": "^1.19.0"
   }
 }
