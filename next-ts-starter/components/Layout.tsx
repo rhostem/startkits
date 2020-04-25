@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Head from 'next/head'
 
 type Props = {
-  title?: string
+  title?: string,
 }
 
 const Layout: React.FunctionComponent<Props> = ({
@@ -25,11 +25,6 @@ const Layout: React.FunctionComponent<Props> = ({
         <Link href="/about">
           <a>About</a>
         </Link>{' '}
-        |{' '}
-        <Link href="/users">
-          <a>Users List</a>
-        </Link>{' '}
-        | <a href="/api/users">Users API</a>
       </nav>
     </header>
     {children}
