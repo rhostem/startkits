@@ -2,7 +2,7 @@ import React, { useState, useCallback } from 'react'
 import { useDispatch } from 'react-redux'
 import { addTodo, removeTodo, toggleIsDone } from './todoSlice'
 import styled from 'styled-components'
-import { useTypedSelector, IAppDispatch } from 'store'
+import { useTypedSelector } from 'store'
 
 const Wrap = styled.div`
   ul {

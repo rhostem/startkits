@@ -4,7 +4,6 @@ import withRedux from 'next-redux-wrapper'
 import { Provider } from 'react-redux'
 import { compose } from 'redux'
 import createStore from 'store/createStore'
-import { IStore } from 'store'
 
 type Props = AppProps & {
   store: IStore,

@@ -5,4 +5,7 @@ const rootReducer = combineReducers({
   todo: todosSlices.reducer,
 })
 
+declare global {
+  type IRootState = ReturnType<typeof rootReducer>
+}
 export default rootReducer
