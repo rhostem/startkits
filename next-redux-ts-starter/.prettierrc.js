@@ -19,6 +19,12 @@ module.exports = {
       },
     },
     {
+      files: '*.json',
+      options: {
+        parser: 'json',
+      },
+    },
+    {
       files: '*.vue',
       options: {
         parser: 'vue',
