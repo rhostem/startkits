@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { ITodo } from 'interfaces/redux/todo'
+import { ITodo } from 'interfaces/features/Todos'
 
 let todoId = 1
 
