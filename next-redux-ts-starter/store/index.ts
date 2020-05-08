@@ -20,4 +20,5 @@ const dummyStore = configureStore({
 declare global {
   type IStore = typeof dummyStore
   type IAppDispatch = typeof dummyStore.dispatch
+  type IGetState = typeof dummyStore.getState
 }

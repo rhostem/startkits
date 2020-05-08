@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { createSlice, PayloadAction, createSelector } from '@reduxjs/toolkit'
 import { ITodo } from 'interfaces/features/Todos'
 
 let todoId = 1
@@ -40,5 +40,12 @@ const todosSlices = createSlice({
 })
 
 export const { addTodo, removeTodo, toggleIsDone } = todosSlices.actions
+
+export const sampleSelector = createSelector(
+  (state: IRootState, getState: IGetState) => {
+    return state.todo
+  },
+  (todo) => {}
+)
 
 export default todosSlices
