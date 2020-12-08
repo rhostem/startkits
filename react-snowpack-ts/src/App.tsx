@@ -17,12 +17,7 @@ function App({}: AppProps) {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <p>
-          Page has been open for <code>{count}</code> seconds.
-        </p>
+
         <p>
           <a
             className="App-link"
@@ -34,6 +29,20 @@ function App({}: AppProps) {
           </a>
         </p>
       </header>
+      <main>
+        <p>
+          Page has been open for <code>{count}</code> seconds.
+        </p>
+        <p>
+          HMR <b>does not reset</b> app state
+        </p>
+
+        <h1>environment variable</h1>
+        <p>
+          SNOWPACK_PUBLIC_API_URL=
+          <code>{import.meta.env.SNOWPACK_PUBLIC_API_URL}</code>
+        </p>
+      </main>
     </div>
   );
 }
