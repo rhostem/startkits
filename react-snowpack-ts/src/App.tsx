@@ -2,9 +2,7 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-interface AppProps {}
-
-function App({}: AppProps) {
+export default function App(): JSX.Element {
   // Create the count state.
   const [count, setCount] = useState(0);
   // Create the counter (+1 every second).
@@ -15,6 +13,7 @@ function App({}: AppProps) {
   // Return the App component.
   return (
     <div className="App">
+      <div> </div>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
 
@@ -30,11 +29,12 @@ function App({}: AppProps) {
         </p>
       </header>
       <main>
+        <h1>HMR</h1>
         <p>
           Page has been open for <code>{count}</code> seconds.
         </p>
         <p>
-          HMR <b>does not reset</b> app state
+          HMR <b>does not reset</b> app state.
         </p>
 
         <h1>environment variable</h1>
@@ -46,5 +46,3 @@ function App({}: AppProps) {
     </div>
   );
 }
-
-export default App;
