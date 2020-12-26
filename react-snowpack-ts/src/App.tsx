@@ -9,7 +9,8 @@ export default function App(): JSX.Element {
   useEffect(() => {
     const timer = setTimeout(() => setCount(count + 1), 1000);
     return () => clearTimeout(timer);
-  }, [count, setCount]);
+  }, [count]);
+
   // Return the App component.
   return (
     <div className="App">
