@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "lock": {
+    "react#^17.0.1": "react@v17.0.1-tOtrZxBRexARODgO0jli",
+    "react-dom#^17.0.1": "react-dom@v17.0.1-DtIXT56q6U8PbgLMrBhE"
+  }
+}

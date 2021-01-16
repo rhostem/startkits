@@ -23,3 +23,19 @@ Your app is ready to be deployed!
 
 Launches the application test runner.
 Run with the `--watch` flag (`npm test -- --watch`) to run in interactive watch mode.
+
+## Manage dependencies
+
+To use streaming import, package info should be managed with snowpack.deps.json.
+
+### add package
+
+```bash
+snowpack add react
+```
+
+### remove package
+
+```bash
+snowpack remove react
+```
