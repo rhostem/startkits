@@ -6,8 +6,8 @@
     "moduleResolution": "node",
     "jsx": "preserve",
     "baseUrl": "./src",
-    /* paths - If you configure Snowpack import aliases, add them here. */
     "paths": {
+      /* If you configure Snowpack import aliases, add them here. */
       "*": [".snowpack/types/*"]
     },
     /* noEmit - Snowpack builds (emits) files, not tsc. */
@@ -18,6 +18,8 @@
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
-    "importsNotUsedAsValues": "error"
+    "importsNotUsedAsValues": "error",
+    "sourceRoot": "./src",
+    "inlineSourceMap": true
   }
 }
