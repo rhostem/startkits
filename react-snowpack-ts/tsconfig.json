@@ -4,11 +4,11 @@
     "module": "esnext",
     "target": "esnext",
     "moduleResolution": "node",
-    "jsx": "preserve",
-    "baseUrl": "./src",
+    "jsx": "react",
+    "baseUrl": "./",
     "paths": {
       /* If you configure Snowpack import aliases, add them here. */
-      "*": [".snowpack/types/*"]
+      "*": [".snowpack/types/*", "./src/*"]
     },
     /* noEmit - Snowpack builds (emits) files, not tsc. */
     "noEmit": true,
