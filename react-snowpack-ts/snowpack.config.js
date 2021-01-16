@@ -1,6 +1,7 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const path = require('path');
 
 module.exports = {
   mount: {
@@ -46,6 +47,7 @@ module.exports = {
     /* ... */
   },
   alias: {
-    /* ... */
+    component: path.join(__dirname, 'src/component'),
+    utils: path.join(__dirname, 'src/utils'),
   },
 };
