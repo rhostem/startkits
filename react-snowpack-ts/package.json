@@ -4,18 +4,28 @@
     "build": "snowpack build",
     "test": "jest",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "dependencies": {
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.12.13",
     "@snowpack/app-scripts-react": "^2.0.0",
     "@snowpack/plugin-dotenv": "^2.0.5",
     "@snowpack/plugin-react-refresh": "^2.3.8",
     "@snowpack/plugin-typescript": "^1.1.1",
     "@snowpack/plugin-webpack": "^2.2.0",
+    "@storybook/addon-actions": "^6.1.16",
+    "@storybook/addon-controls": "^6.1.16",
+    "@storybook/addon-essentials": "^6.1.16",
+    "@storybook/addon-knobs": "^6.1.16",
+    "@storybook/addon-links": "^6.1.16",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^6.1.16",
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.0.0",
     "@types/chai": "^4.2.13",
@@ -24,6 +34,7 @@
     "@types/snowpack-env": "^2.3.2",
     "@typescript-eslint/eslint-plugin": "^4.10.0",
     "@typescript-eslint/parser": "^4.10.0",
+    "babel-loader": "^8.2.2",
     "chai": "^4.2.0",
     "eslint": "^7.16.0",
     "eslint-config-prettier": "^7.1.0",

@@ -1,6 +1,7 @@
 import Header from 'components/Header';
 import React, { useState, useEffect } from 'react';
 import './App.css';
+import EnvList from './components/EnvList';
 
 export default function App(): JSX.Element {
   const [count, setCount] = useState(0);
@@ -25,11 +26,7 @@ export default function App(): JSX.Element {
           HMR <b>does not reset</b> app state.
         </p>
 
-        <h1>Environment variable</h1>
-        <p>
-          SNOWPACK_PUBLIC_API_URL=
-          <code>{import.meta.env.SNOWPACK_PUBLIC_API_URL}</code>
-        </p>
+        <EnvList></EnvList>
       </main>
     </div>
   );
