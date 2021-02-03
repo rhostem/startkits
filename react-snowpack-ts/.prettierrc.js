@@ -1,6 +1,7 @@
 module.exports = {
   singleQuote: true,
   trailingComma: 'all',
+  jsxSingleQuote: true,
   overrides: [
     {
       files: '*.css',

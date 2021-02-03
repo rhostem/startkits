@@ -1,6 +1,6 @@
-import Header from 'components/Header';
-import React, { useState, useEffect } from 'react';
 import './App.css';
+import React, { useState, useEffect } from 'react';
+import Header from 'components/Header';
 import EnvList from './components/EnvList';
 
 export default function App(): JSX.Element {
@@ -14,7 +14,7 @@ export default function App(): JSX.Element {
 
   // Return the App component.
   return (
-    <div className="App">
+    <div className='App'>
       <Header></Header>
 
       <main>
