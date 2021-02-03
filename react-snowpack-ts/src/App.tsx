@@ -1,6 +1,5 @@
 import Header from 'components/Header';
 import React, { useState, useEffect } from 'react';
-import styled from 'styled-components';
 import './App.css';
 
 export default function App(): JSX.Element {
