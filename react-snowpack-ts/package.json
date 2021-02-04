@@ -3,8 +3,8 @@
     "start": "snowpack dev",
     "build": "snowpack build",
     "test": "jest",
-    "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "lint": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint": "eslint -c .eslintrc.js 'src/**/*.ts*'",
+    "format": "eslint -c .eslintrc.js --fix 'src/**/*.ts*'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
@@ -42,6 +42,7 @@
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-testing-library": "^3.10.1",
     "jest": "^26.6.3",
     "prettier": "2.2.1",
     "snowpack": "^2.18.5",
