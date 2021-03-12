@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const snowpackConfig = require('../snowpack.config.js');
+const snowpackConfig = require('../snowpack.config');
 
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -34,7 +34,12 @@ module.exports = {
     // Add rules for supporting import.meta
     config.module.rules.push({
       test: /\.[tj]sx?$/,
-      loader: [require.resolve('./importMetaLoader.js')],
+      loader: [
+        require.resolve('@snowpack/plugin-webpack/plugins/import-meta-fix'),
+        require.resolve(
+          '@snowpack/plugin-webpack/plugins/proxy-import-resolve',
+        ),
+      ],
     });
 
     return config;
