@@ -9,8 +9,8 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react": "16.14.0",
+    "react-dom": "16.14.0"
   },
   "devDependencies": {
     "@babel/core": "^7.12.13",
@@ -19,7 +19,7 @@
     "@snowpack/plugin-react-refresh": "^2.3.8",
     "@snowpack/plugin-typescript": "^1.1.1",
     "@snowpack/plugin-webpack": "^2.2.0",
-    "@storybook/addon-actions": "^6.1.16",
+    "@storybook/addon-actions": "6.1.16",
     "@storybook/addon-controls": "^6.1.16",
     "@storybook/addon-essentials": "^6.1.16",
     "@storybook/addon-knobs": "^6.1.16",
