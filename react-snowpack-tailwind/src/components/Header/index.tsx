@@ -5,7 +5,7 @@ import './style.css';
 export default function Header(): JSX.Element {
   return (
     <header className='App-header'>
-      <img src={logo} className='App-logo' alt='logo' />
+      <img src={logo} className='w-20 animate-pulse' alt='logo' />
 
       <p>
         <a

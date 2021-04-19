@@ -1,6 +1,5 @@
-import './App.css';
 import React, { useState, useEffect } from 'react';
-import Header from 'components/Header';
+import Header from './components/Header';
 import EnvList from './components/EnvList';
 
 export default function App(): JSX.Element {
@@ -14,14 +13,15 @@ export default function App(): JSX.Element {
 
   // Return the App component.
   return (
-    <div className='App'>
+    <div className=''>
       <Header></Header>
 
-      <main>
-        <h1>HMR</h1>
-        <p>
+      <main className=''>
+        <h1 className='bg-blue-300 text-2xl font-bold p-2'>HMR</h1>
+        <p className='block m-5 border-4 border-dashed'>
           Page has been open for <code>{count}</code> seconds.
         </p>
+
         <p>
           HMR <b>does not reset</b> app state.
         </p>

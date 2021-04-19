@@ -4,26 +4,21 @@ interface Props {}
 
 const EnvList: React.FC<Props> = () => {
   return (
-    <>
+    <div className='block text-sm font-light px-10'>
       <h1>
         <code>import-meta</code>
       </h1>
       <div>
-        <h2>
-          <code>env</code>
-        </h2>
-        <p>
-          SNOWPACK_PUBLIC_API_URL=
-          <code>{import.meta.env.SNOWPACK_PUBLIC_API_URL}</code>
-        </p>
+        <code className='font-bold'>env</code>
+        <span className='ml-2'>
+          SNOWspanACK_PUBLIC_API_URL={import.meta.env.SNOWPACK_PUBLIC_API_URL}
+        </span>
       </div>
       <div>
-        <h2>
-          <code>url</code>
-        </h2>
-        {import.meta.url}
+        <code className='font-bold'>url</code>
+        <span className='ml-2'>{import.meta.url}</span>
       </div>
-    </>
+    </div>
   );
 };
 

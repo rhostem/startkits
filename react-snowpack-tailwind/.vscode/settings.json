@@ -1,0 +1,11 @@
+{
+  "editor.quickSuggestions": {
+    // For ESLint
+    "source.fixAll.eslint": true,
+
+    // for tailwind intellisense
+    "strings": true
+  },
+  "css.validate": false,
+  "tailwindCSS.emmetCompletions": true
+}
