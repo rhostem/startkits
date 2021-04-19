@@ -17,7 +17,7 @@ export default function App(): JSX.Element {
       <Header></Header>
 
       <main className=''>
-        <h1 className='bg-blue-300 text-2xl font-bold p-2'>HMR</h1>
+        <h1 className='bg-red-400 text-center p-5 text-2xl font-bold '>HMR</h1>
         <p className='block m-5 border-4 border-dashed'>
           Page has been open for <code>{count}</code> seconds.
         </p>
