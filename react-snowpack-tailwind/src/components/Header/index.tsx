@@ -1,21 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
-import './style.css';
 
 export default function Header(): JSX.Element {
   return (
-    <header className='App-header'>
-      <img src={logo} className='w-20 animate-pulse' alt='logo' />
-
-      <p>
-        <a
-          className='App-link'
-          href='https://reactjs.org'
-          target='_blank'
-          rel='noopener noreferrer'
-        >
-          Learn React
-        </a>
+    <header className='flex p-2 justify-center items-center bg-gray-700 '>
+      <img src={logo} className='h-40 w-20 animate-spin-slow' alt='logo' />
+      <p className='flex'>
+        <a className='text-blue-300 text-2xl'>Learn React</a>
       </p>
     </header>
   );

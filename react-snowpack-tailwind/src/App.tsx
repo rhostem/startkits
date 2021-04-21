@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
-import EnvList from './components/EnvList';
 
 export default function App(): JSX.Element {
   const [count, setCount] = useState(0);
@@ -15,18 +14,11 @@ export default function App(): JSX.Element {
   return (
     <div className=''>
       <Header></Header>
-
       <main className=''>
-        <h1 className='bg-red-400 text-center p-5 text-2xl font-bold '>HMR</h1>
-        <p className='block m-5 border-4 border-dashed'>
+        <h1 className='bg-red-400 text-center p-5 text-2xl font-bold'>HMR</h1>
+        <p className='animate-ping text-center m-10'>
           Page has been open for <code>{count}</code> seconds.
         </p>
-
-        <p>
-          HMR <b>does not reset</b> app state.
-        </p>
-
-        <EnvList></EnvList>
       </main>
     </div>
   );
