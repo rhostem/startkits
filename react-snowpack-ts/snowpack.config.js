@@ -1,6 +1,5 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 const path = require('path');
-const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mount: {
@@ -12,25 +11,6 @@ module.exports = {
     '@snowpack/plugin-react-refresh',
     '@snowpack/plugin-dotenv',
     '@snowpack/plugin-typescript',
-    [
-      '@snowpack/plugin-webpack',
-      {
-        extendConfig: (config) => {
-          config.plugins.push(
-            new BundleAnalyzerPlugin({
-              analyzerMode: 'static',
-              reportFilename: 'docs/bundleAnalyze.html',
-              defaultSizes: 'parsed',
-              openAnalyzer: false,
-              generateStatsFile: true,
-              statsFilename: 'docs/bundleAnalyze.json',
-            }),
-          );
-          config.devtool = 'source-map';
-          return config;
-        },
-      },
-    ],
   ],
   routes: [
     /* Enable an SPA Fallback in development: */
@@ -44,6 +24,11 @@ module.exports = {
   },
   buildOptions: {
     sourcemap: false,
+  },
+  optimize: {
+    bundle: true,
+    minify: true,
+    target: 'es2019',
   },
   alias: {
     components: path.join(__dirname, 'src/components'),
