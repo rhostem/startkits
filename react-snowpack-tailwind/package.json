@@ -2,7 +2,7 @@
   "name": "react-snowpack-tailwind",
   "private": true,
   "scripts": {
-    "tw:watch": "TAILWIND_MODE=watch NODE_ENV=development postcss ./src/style.css -o ./src/compiled.css -w",
+    "tw:watch": "TAILWIND_MODE=watch NODE_ENV=development postcss ./src/tailwind.css -o ./src/tailwind_out.css -w",
     "tw:build": "NODE_ENV=production postcss ./src/style.css -o ./src/compiled.css",
     "start": "concurrently \"snowpack dev\" \"yarn tw:watch\"",
     "build": "NODE_ENV=production yarn tw:build && snowpack build",

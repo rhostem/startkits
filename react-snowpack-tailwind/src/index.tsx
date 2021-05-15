@@ -1,4 +1,4 @@
-import './compiled.css';
+import './tailwind_out.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
