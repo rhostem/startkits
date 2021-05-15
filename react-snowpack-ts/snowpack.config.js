@@ -16,14 +16,31 @@ module.exports = {
       '@snowpack/plugin-webpack',
       {
         extendConfig: (config) => {
+          // NOTE: optional chaining 문법 오류 때문에 babel-loader 직접 추가함.
+          // 추가 없어도 빌드 가능하다면 삭제해도 됨
+          config.module.rules.push({
+            test: /\.m?js$/,
+            exclude: /node_modules/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env'],
+                targets: '> 0.25%, not dead',
+                plugins: [
+                  ['@babel/plugin-transform-runtime', { regenerator: true }],
+                ],
+              },
+            },
+          });
+
           config.plugins.push(
             new BundleAnalyzerPlugin({
               analyzerMode: 'static',
               reportFilename: 'docs/bundleAnalyze.html',
               defaultSizes: 'parsed',
               openAnalyzer: false,
-              generateStatsFile: true,
               statsFilename: 'docs/bundleAnalyze.json',
+              generateStatsFile: true,
             }),
           );
           config.devtool = 'source-map';

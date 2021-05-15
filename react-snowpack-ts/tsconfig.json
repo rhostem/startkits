@@ -2,7 +2,7 @@
   "include": ["src", "types"],
   "compilerOptions": {
     "module": "esnext",
-    "target": "esnext",
+    "target": "es6",
     "moduleResolution": "node",
     "jsx": "preserve",
     "baseUrl": "./src",
