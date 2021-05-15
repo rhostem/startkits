@@ -36,10 +36,12 @@ module.exports = {
     /* Enable an SPA Fallback in development: */
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
   ],
-  installOptions: {
+  packageOptions: {
     polyfillNode: true,
   },
-  devOptions: {},
+  devOptions: {
+    open: 'chromew',
+  },
   buildOptions: {
     sourcemap: false,
   },

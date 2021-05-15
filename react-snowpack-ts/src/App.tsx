@@ -7,6 +7,9 @@ export default function App(): JSX.Element {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    const a: any = undefined;
+    console.log(a?.prop);
+
     // timer won't reset with HMR
     const timer = setTimeout(() => setCount(count + 1), 1000);
     return () => clearTimeout(timer);
