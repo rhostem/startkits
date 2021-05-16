@@ -1,5 +1,4 @@
 import React from 'react';
-import '../../tailwind.css';
 
 export default {
   title: 'tailwindcss/Form',
