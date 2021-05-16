@@ -42,21 +42,21 @@ module.exports = {
       ],
     });
 
-    // config.module.rules.push({
-    //   test: /\.css$/,
-    //   use: [
-    //     'style-loader',
-    //     'css-loader',
-    //     // {
-    //     //   loader: 'postcss-loader',
-    //     //   options: {
-    //     //     ident: 'postcss',
-    //     //     plugins: [require('tailwindcss'), require('autoprefixer')],
-    //     //   },
-    //     // },
-    //   ],
-    //   include: path.resolve(__dirname, '../'),
-    // });
+    // add postcss-loader to use tailwind css
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [
+        {
+          loader: 'postcss-loader',
+          options: {
+            postcssOptions: {
+              plugins: [require('tailwindcss'), require('autoprefixer')],
+            },
+          },
+        },
+      ],
+      include: path.resolve(__dirname, '../'),
+    });
 
     return config;
   },
